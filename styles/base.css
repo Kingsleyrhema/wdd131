@@ -1,0 +1,103 @@
+/* Base CSS for WDD 131 */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfdfd;
+    color: #333;
+  }
+  
+  header {
+    background-color: #14325C;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .highlight {
+    color: #FFD700;
+    font-weight: bold;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #333;
+    padding: 0.5rem 0;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #FFD700;
+  }
+  
+  main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about, .location {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .about img, .location img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  h2 {
+    font-family: 'Raleway', sans-serif;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  footer {
+    background-color: #14325C;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+  }
+  
+  footer span {
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+  }
+  
+  ul li a:hover {
+    color: #007acc;
+  }
+  
