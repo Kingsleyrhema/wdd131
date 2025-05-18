@@ -1,0 +1,18 @@
+@media screen and (min-width: 768px) {
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 0;
+    width: auto;
+  }
+
+  #menu-button {
+    display: none;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
