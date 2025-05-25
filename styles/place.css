@@ -19,11 +19,12 @@
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.4;
 }
+
 
 /*---------------------------------------------------------
   Header
