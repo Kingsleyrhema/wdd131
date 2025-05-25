@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Nigeria</title>
+  <link rel="stylesheet" href="styles/place.css" />
+  <script defer src="scripts/place.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Nigeria</h1>
+    <div class="decor-bar"></div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <picture>
+        <!-- large-screen WebP -->
+        <source media="(min-width: 768px)" srcset="images/hero.webp" type="image/webp">
+        <!-- small-screen WebP fallback -->
+        <img src="images/hero.webp"
+             alt="Herds of cow"
+             loading="lazy">
+      </picture>
+
+      <!-- data & weather as overlays on desktop, stacked on mobile -->
+      <section class="info">
+        <article class="data-box">
+          <h2>Data</h2>
+          <ul>
+            <li><strong>Area:</strong> 587,041 sq km</li>
+            <li><strong>Population:</strong> 27,691,018</li>
+            <li><strong>Capital:</strong> Abuja</li>
+            <li><strong>Languages:</strong> English, Igbo</li>
+            <li><strong>Currency:</strong> NIgeria Naira</li>
+            <li><strong>Time Zone:</strong> UTC+1</li>
+            <li><strong>Calling Code:</strong> +234</li>
+            <li><strong>Internet TLD:</strong> .ng</li>
+          </ul>
+        </article>
+
+        <article class="weather-box">
+          <h2 id="weather-heading">
+            Weather
+            <!-- mobile-only SVG icon -->
+            <span class="mobile-icon">
+              <img src="icons/weather-icon.svg" alt="Partly Cloudy">
+            </span>
+          </h2>
+          <ul>
+            <li><strong>Temperature:</strong> <span id="temp">27 °C</span></li>
+            <li><strong>Conditions:</strong> Partly Cloudy</li>
+            <li><strong>Wind:</strong> <span id="wind-speed">6 km/h</span></li>
+            <li><strong>Wind Chill:</strong> <span id="windchill">--</span></li>
+          </ul>
+        </article>
+      </section>
+    </div>
+  </main>
+
+<footer>
+    <p>&copy; <span id="currentyear"></span> 🌍 Rhema Kingsley 🌍 Lagos, Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

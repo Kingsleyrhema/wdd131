@@ -1,0 +1,139 @@
+/*---------------------------------------------------------
+  Global variables
+----------------------------------------------------------*/
+:root {
+  --red:   #14325C;
+  --green: #007a3d;
+  --text:  #333;
+  --bg:    #fff;
+  --overlay-bg: rgba(255, 255, 255, 0.85);
+  --max-width: 1200px;
+  --gap: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.4;
+}
+
+/*---------------------------------------------------------
+  Header
+----------------------------------------------------------*/
+.site-header {
+  text-align: center;
+  background: var(--red);
+  color: white;
+  padding: 1rem 0 0;
+}
+
+.site-header h1 {
+  margin: 0.5rem 0 0;
+}
+
+.decor-bar {
+  height: 0.5rem;
+  background: var(--green);
+  margin-bottom: 1rem;
+}
+
+/*---------------------------------------------------------
+  Main / Hero
+----------------------------------------------------------*/
+.hero {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*---------------------------------------------------------
+  Info boxes (data & weather)
+----------------------------------------------------------*/
+.info {
+  display: grid;
+  gap: var(--gap);
+  margin: var(--gap);
+}
+
+.data-box,
+.weather-box {
+  background: var(--overlay-bg);
+  padding: var(--gap);
+  border-radius: 0.25rem;
+}
+
+.data-box h2,
+.weather-box h2 {
+  margin-top: 0;
+}
+
+/* mobile icon only */
+.mobile-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+.mobile-icon img {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+/*---------------------------------------------------------
+  Footer
+----------------------------------------------------------*/
+footer {
+  background-color: #14325C;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/*---------------------------------------------------------
+  Responsive behavior
+----------------------------------------------------------*/
+@media (min-width: 768px) {
+  .info {
+    /* we won't stack the boxes vertically on desktop */
+    display: block;
+  }
+  .data-box {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 260px;
+  }
+  .weather-box {
+    position: absolute;
+    top: 55%;
+    right: 5%;
+    width: 200px;
+  }
+
+  /* hide the inline SVG icon in wide view */
+  .mobile-icon {
+    display: none;
+  }
+
+  /* use a pseudo-element for the weather emoticon */
+  #weather-heading::after {
+    content: " ⛅";
+    font-size: 1.2em;
+    margin-left: 0.25em;
+  }
+}
