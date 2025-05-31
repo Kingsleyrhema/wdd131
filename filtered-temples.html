@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temple Album – Rhema Kingsley (Filtered)</title>
+  <meta name="description" content="A photo album showcasing beautiful temples from around the world.">
+  <meta name="author" content="Rhema Kingsley">
+
+  <!-- Link your existing CSS files (no changes needed to these unless you want to tweak visuals) -->
+  <link rel="stylesheet" href="styles/filtered-temples.css" />
+  <link rel="stylesheet" href="styles/temples-large.css" />
+
+  <!-- Google Fonts, etc. -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+  <!-- Point the script to our new filtered‐temples.js (must use defer) -->
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <button id="menu-button" aria-label="Menu Button">☰</button>
+    <nav id="menu">
+      <!-- We will listen for clicks on these links and filter accordingly -->
+      <a href="#" data-filter="Home">Home</a>
+      <a href="#" data-filter="Old">Old</a>
+      <a href="#" data-filter="New">New</a>
+      <a href="#" data-filter="Large">Large</a>
+      <a href="#" data-filter="Small">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- This <h2> will update to reflect “Home”, “Old”, “New”, etc. -->
+    <h2 id="filter-title">Home</h2>
+
+    <!-- This <section> will be populated by JavaScript -->
+    <section class="grid" id="temple-container">
+      <!-- JavaScript will inject <figure>…</figure> cards here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> 🌍 Rhema Kingsley 🌍 Lagos, Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
