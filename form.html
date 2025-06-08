@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <meta name="description" content="A form to submit product reviews including ratings, features, and written feedback.">
     <meta name="author" content="Rhema kingsley">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
   <title>Product Review Form</title>
-  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/styles.css" >
   <script defer src="scripts/form.js" defer></script>
 </head>
 <body>
@@ -22,31 +27,31 @@
 
       <fieldset>
         <legend>Overall Rating</legend>
-        <label><input type="radio" name="rating" id="rate1" value="1" required />★</label>
-        <label><input type="radio" name="rating" id="rate2" value="2" />★★</label>
-        <label><input type="radio" name="rating" id="rate3" value="3" />★★★</label>
-        <label><input type="radio" name="rating" id="rate4" value="4" />★★★★</label>
-        <label><input type="radio" name="rating" id="rate5" value="5" />★★★★★</label>
+        <label><input type="radio" name="rating" id="rate1" value="1" required >★</label>
+        <label><input type="radio" name="rating" id="rate2" value="2" >★★</label>
+        <label><input type="radio" name="rating" id="rate3" value="3" >★★★</label>
+        <label><input type="radio" name="rating" id="rate4" value="4" >★★★★</label>
+        <label><input type="radio" name="rating" id="rate5" value="5" >★★★★★</label>
       </fieldset>
 
       <label for="install-date">Date of Installation</label>
-      <input type="date" id="install-date" name="install-date" required />
+      <input type="date" id="install-date" name="install-date" required >
 
       <fieldset>
         <legend>Which features did you find useful in the product? <em>(Check all that apply)</em></legend>
-        <label><input type="checkbox" id="durability" name="features" value="Durability" /> Durability</label>
-        <label><input type="checkbox" id="ease" name="features" value="Ease of Use" /> Ease of Use</label>
-        <label><input type="checkbox" id="performance" name="features" value="Performance" /> Performance</label>
-        <label><input type="checkbox" id="design" name="features" value="Design" /> Design</label>
+        <label><input type="checkbox" id="durability" name="features" value="Durability" > Durability</label>
+        <label><input type="checkbox" id="ease" name="features" value="Ease of Use" > Ease of Use</label>
+        <label><input type="checkbox" id="performance" name="features" value="Performance" > Performance</label>
+        <label><input type="checkbox" id="design" name="features" value="Design" > Design</label>
       </fieldset>
 
       <label for="review">Written Review <span>(Optional)</span></label>
       <textarea id="review" name="review"></textarea>
 
       <label for="username">Your Name <span>(Optional)</span></label>
-      <input type="text" id="username" name="username" />
+      <input type="text" id="username" name="username" >
 
-      <input type="submit" value="Post Review" />
+      <input type="submit" value="Post Review" >
     </form>
   </main>
   <footer>
