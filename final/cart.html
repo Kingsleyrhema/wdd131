@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>EcoCart | Your Cart</title>
+  <link rel="stylesheet" href="styles/style.css">
+
+  <!-- AFTER <meta viewport> but BEFORE your stylesheet link -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <h1>EcoCart</h1>
+    
+  <button class="nav-toggle" id="nav-toggle"
+      aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html" aria-current="page">Cart (<span id="nav-cart-count">0</span>)</a></li>
+        <li><a href="contact.html">Track Order</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Your Cart</h2>
+    <div id="cart-empty" hidden>
+      <p>Your cart is empty. <a href="products.html">Browse products</a>.</p>
+    </div>
+
+    <table id="cart-table" class="cart-table" hidden>
+      <thead>
+        <tr><th>Product</th><th>Qty</th><th>Price</th><th>Total</th><th></th></tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot>
+        <tr><td colspan="3"><strong>Grand&nbsp;Total</strong></td><td id="grand-total">$0.00</td><td></td></tr>
+      </tfoot>
+    </table>
+
+    <button id="clear-cart" class="btn-secondary" hidden>Clear Cart</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EcoCart</p>
+    <a href="references.html">References</a>
+  </footer>
+
+  <script src="scripts/scripts.js" defer></script>
+</body>
+</html>
