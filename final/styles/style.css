@@ -1,0 +1,218 @@
+/* =========  Design Tokens  ========= */
+:root {
+  --green:        #27ae60;
+  --green-dark:   #1e8449;
+  --teal:         #16a085;
+  --teal-light:   #1abc9c;
+  --gray-100:     #f9fbfc;
+  --gray-700:     #3d3d3d;
+  --radius-s:     .4rem;
+  --radius-m:     .75rem;
+  --shadow-sm:    0 2px 4px rgba(0,0,0,.06);
+  --shadow-md:    0 6px 18px rgba(0,0,0,.08);
+
+  --font-body:    'Poppins', system-ui, sans-serif;
+  --font-head:    'Merriweather', serif;
+}
+
+/* =========  Base Reset  ========= */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  line-height:1.65;
+  color:var(--gray-700);
+  background:var(--gray-100);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+/* =========  Header  ========= */
+header{
+  position:sticky; top:0; z-index:1000;
+  display:flex; align-items:center; gap:2rem;
+  padding:.75rem 1rem;
+  background:rgba(39,174,96,.85);         /* translucent for glass feel */
+  backdrop-filter:blur(12px);
+  box-shadow:var(--shadow-sm);
+}
+header h1{
+  font:700 1.5rem var(--font-head);
+  letter-spacing:.5px;
+  white-space:nowrap;
+}
+
+/* nav  -------------------------------------------------- */
+nav{margin-left:auto}
+nav ul{
+  display:flex; gap:1.5rem; list-style:none;
+  font-weight:500; letter-spacing:.4px;
+}
+nav a{
+  color:#fff; text-decoration:none; position:relative; padding:.25rem 0;
+  transition:color .25s;
+}
+nav a:hover{color:#e9ffe8}
+nav a[aria-current="page"]::after{
+  content:'';position:absolute;left:0;right:0;bottom:-4px;height:3px;
+  background:#fff;border-radius:var(--radius-s);
+}
+
+
+/* =========  Hero  ========= */
+.hero{
+  padding:4rem 1rem; text-align:center; color:#fff;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.08) 0%, rgba(255,255,255,0) 70%),
+    linear-gradient(135deg, var(--teal) 0%, var(--green) 100%);
+}
+.hero h2{font:600 2rem/1.3 var(--font-body); margin-bottom:.75rem}
+.hero p{font-size:1.1rem; opacity:.95}
+.hero .btn-primary{margin-top:1.5rem}
+
+/* =========  Sections  ========= */
+main section{
+  max-width:960px;margin:0 auto;padding:3rem 1rem;
+}
+main section:nth-of-type(even){
+  background:#fff; border-radius:var(--radius-m);
+  box-shadow:var(--shadow-sm);
+}
+h3{font:600 1.35rem var(--font-body); margin-bottom:1rem}
+.icon-list{list-style:none;margin-top:.75rem}
+.icon-list li{margin-bottom:.3rem;font-size:1.05rem}
+.steps{margin-left:1.25rem}
+blockquote{
+  margin:1rem 0; padding:1rem 1.25rem;
+  background:#fff;border-left:4px solid var(--teal-light);
+  border-radius:var(--radius-s); box-shadow:var(--shadow-sm);
+}
+cite{font-weight:600;font-style:normal}
+
+/* CTA */
+.cta{
+  text-align:center;background:var(--teal);color:#fff;
+  border-radius:var(--radius-m);box-shadow:var(--shadow-md);
+}
+.cta h3{font-size:1.45rem}
+
+/* =========  Buttons  ========= */
+.btn-primary,button[type=submit]{
+  display:inline-block;
+  background:var(--green);border:0;color:#fff;
+  padding:.7rem 1.4rem;margin:0;
+  font-weight:600;letter-spacing:.35px;
+  border-radius:var(--radius-s);
+  transition:background .25s,transform .25s,box-shadow .25s;
+}
+.btn-primary:hover,button[type=submit]:hover{
+  background:var(--green-dark);transform:translateY(-2px);
+  box-shadow:var(--shadow-sm);
+}
+.btn-secondary{
+  background:var(--teal);color:#fff;padding:.6rem 1.2rem;border:0;
+  border-radius:var(--radius-s);
+}
+
+/* =========  Product Grid  ========= */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:2rem;padding:1rem;
+}
+.product-card{
+  background:#fff;border-radius:var(--radius-m);
+  box-shadow:var(--shadow-sm);
+  padding:1.1rem;text-align:center;transition:transform .25s,box-shadow .25s;
+}
+.product-card:hover{
+  transform:translateY(-6px);box-shadow:var(--shadow-md);
+}
+.product-card img{
+  max-width:100%;border-radius:var(--radius-s);margin-bottom:1rem;
+}
+
+/* =========  Forms  ========= */
+form{
+  max-width:520px;margin:1rem auto;display:flex;flex-direction:column;gap:.9rem;
+}
+input{
+  padding:.65rem;border:2px solid #d1d1d1;border-radius:var(--radius-s);
+  transition:border-color .2s;
+}
+input:focus{border-color:var(--teal-light);outline:none}
+input:invalid{border-color:#e74c3c}
+.form-hint{font-size:.88rem;color:#666}
+
+/* =========  Cart Table  ========= */
+.cart-table{width:100%;border-collapse:collapse;margin-bottom:1rem}
+.cart-table th,.cart-table td{
+  border:1px solid #e2e8f0;padding:.9rem;text-align:center
+}
+.cart-table th{
+  background:var(--teal);color:#fff;font-weight:600
+}
+
+/* =========  Footer  ========= */
+footer{
+  background:var(--green);color:#e8ffe3;text-align:center;padding:1rem;
+  font-size:.9rem;box-shadow:var(--shadow-sm)
+}
+
+/* =========  Layout Helpers  ========= */
+main{flex:1}
+
+/* =========  Desktop ↔ Tablet Tweaks  ========= */
+@media (max-width:900px){
+  .hero h2{font-size:1.65rem}
+}
+
+/* ---------- Hamburger button ---------- */
+.nav-toggle{
+  display:none;                      /* hidden until mobile breakpoint */
+  background:none;
+  border:0;
+  font-size:1.9rem;
+  color:#fff;
+  cursor:pointer;
+  line-height:1;
+}
+
+/* =========  Mobile & small-tablet (≤ 900 px) ========= */
+@media (max-width:900px){
+  header{justify-content:space-between; position:relative;}
+
+  /* show hamburger */
+  .nav-toggle{
+    display:block;
+    position:absolute;
+    right:1rem; top:50%;
+    transform:translateY(-50%);
+    z-index:1100;                    /* sits above the slide-down nav */
+  }
+
+  /* collapsed nav defaults */
+  nav{
+    position:absolute;
+    top:100%;                        /* right under the header */
+    left:0; right:0;
+    border-radius:var(--radius-m);
+    background:rgba(39,174,96,.95);
+    overflow:hidden;
+    max-height:0;
+    transition:max-height .35s ease;
+  }
+
+  /* expanded when JS toggles .open */
+  nav.open{max-height:260px;}
+
+  /* vertical link list */
+  nav ul{
+    flex-direction:column;
+    align-items:center;
+    gap:1rem;
+    padding:1rem 0;
+  }
+  nav ul li{width:100%; text-align:center;}
+}
